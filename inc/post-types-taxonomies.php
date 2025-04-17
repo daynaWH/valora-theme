@@ -83,7 +83,7 @@ function valora_register_custom_post_types() {
         // 'menu_position'      => 5,
         'menu_icon'          => 'dashicons-store',
         'supports'           => array( 'title', 'editor', 'thumbnail' ),
-        // 'template'           => array( array( 'core/paragraph' ), array( 'core/gallery')),
+        'template'           => array( array( 'core/paragraph' ), array( 'core/gallery')),
         'template_lock'      => 'all'
     );
     register_post_type( 'val-amenity', $args );
