@@ -68,3 +68,8 @@ Update URI: false
     border-radius: 5px;
     color: var(--wp--preset--color--base);
 }
+
+.wc-tabs-wrapper .wc-tabs #tab-title-description {
+    background-color: var(--wp--preset--color--base);
+
+}
