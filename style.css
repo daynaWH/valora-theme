@@ -14,3 +14,57 @@ Text Domain: valora-theme
 Update URI: false
 */
 
+
+
+
+
+/* single room */
+.single-product .wp-block-add-to-cart-form .cart .wc-bookings-booking-form-button {
+    color: var(--wp--preset--color--base);
+    background-color: var(--wp--preset--color--primary);
+    border: 1px solid var(--wp--preset--color--accent);
+    float: left;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    grid-column: 2 / 3!important;
+}
+.single-product .cart .wc-bookings-booking-form-button:hover {
+    color: var(--wp--preset--color--contrast);
+    background-color: var(--wp--preset--color--hover);
+}
+
+.cart .wc-bookings-booking-form {
+    border: none;
+    padding: 0;
+}
+
+.cart .wc-bookings-date-picker {
+    border: none;
+    padding: 0;
+}
+
+.cart .ui-datepicker-title, .cart .ui-datepicker-inline .ui-datepicker-next, .cart .ui-datepicker-inline .ui-datepicker-prev, .cart .ui-datepicker-inline .ui-datepicker-header {
+    background-color: var(--wp--preset--color--primary);
+}
+
+.cart .ui-datepicker-inline .ui-datepicker-next:hover, .cart .ui-datepicker-inline .ui-datepicker-prev:hover{
+    background-color: var(--wp--preset--color--hover);
+}
+.cart .wc-bookings-booking-cost {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--base);
+    margin: 1rem 1rem;
+}
+.cart .hasDatepicker {
+    border-radius: 15px;
+    overflow: hidden;
+}
+.cart #wc_bookings_field_duration {
+    background-color: var(--wp--preset--color--primary);
+    border: none;
+    padding: .5rem;
+    border-radius: 5px;
+    color: var(--wp--preset--color--base);
+}
