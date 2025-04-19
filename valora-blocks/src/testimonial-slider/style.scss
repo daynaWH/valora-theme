@@ -1,0 +1,53 @@
+@import "swiper/css/bundle";
+
+.wp-block-valora-blocks-testimonial-slider {
+	position: relative;
+	padding-bottom: 3rem;
+}
+
+.swiper:not(.swiper-navigation-disabled) {
+	width: calc(100% - 4rem);
+}
+
+.swiper:not(.swiper-navigation-disabled) ~ .swiper-button-next {
+	right: 0;
+}
+
+.swiper:not(.swiper-navigation-disabled) ~ .swiper-button-prev {
+	left: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	background: none;
+	border: none;
+	color: var(--arrow-color);
+}
+
+.swiper-slide .wp-block-pullquote {
+	padding-bottom: 1rem;
+}
+
+.swiper-slide blockquote {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1.5rem;
+
+	p {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	cite {
+		font-size: 2rem;
+	}
+}
+.testimonial-rating {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+
+	.star-filled {
+		height: 3rem;
+	}
+}
