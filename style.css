@@ -14,8 +14,22 @@ Text Domain: valora-theme
 Update URI: false
 */
 
-
-
+/* footer */
+footer::before {
+    content: '';
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    display: block;
+    width: 100%;
+    /* height: auto; */
+    aspect-ratio: 1918 / 173;
+    
+    background: url('assets/images/footer-bg.svg') no-repeat center;
+    background-size: contain;
+    z-index: 1;
+    margin-bottom: 0;
+  }
 
 
 /* single room */
