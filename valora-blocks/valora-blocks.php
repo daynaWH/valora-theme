@@ -96,3 +96,31 @@ function render_testimonial_slider( $attributes, $content ) {
     <?php
     return ob_get_clean();
 }
+
+/**
+* Registers the custom fields for some blocks.
+*
+* @see https://developer.wordpress.org/reference/functions/register_post_meta/
+*/
+function valora_register_custom_fields() {
+	register_post_meta(
+		'wp_template_part',
+		'company_email',
+		array(
+			'type'         => 'string',
+			'show_in_rest' => true,
+			'single'       => true
+		)
+	);
+
+    register_post_meta(
+		'wp_template_part',
+		'company_address',
+		array(
+			'type'         => 'string',
+			'show_in_rest' => true,
+			'single'       => true
+		)
+	);
+}
+add_action( 'init', 'valora_register_custom_fields' );
