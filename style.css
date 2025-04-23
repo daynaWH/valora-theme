@@ -95,3 +95,20 @@ Update URI: false
     border-radius: 5px;
     color: var(--wp--preset--color--base);
 }
+
+.type-product .attachment-post-thumbnail {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.entry-content .wp-block-gallery img {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
