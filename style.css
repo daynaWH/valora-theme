@@ -170,3 +170,51 @@ footer::before {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
+
+.wp-block-cover__inner-container h1, .wp-block-cover__inner-container p{
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+.wp-block-cover__inner-container h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    
+}
+
+.wp-block-cover .wp-block-cover__inner-container p {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+
+.wp-block-cover__inner-container {
+    padding-bottom: 12rem;
+}
+@media (max-width: 768px) {
+    .wp-block-cover__inner-container h1 {
+        font-size: 4rem;
+    }
+    .wp-block-cover__inner-container p {
+        font-size: 1.5rem;
+    }
+    .wp-block-cover__inner-container {
+        padding-bottom: 6rem;
+    }
+}
+@media (max-width: 480px) {
+    .wp-block-cover__inner-container h1 {
+        font-size: 2rem;
+    }
+    .wp-block-cover__inner-container p {
+        font-size: 1rem;
+    }
+    .wp-block-cover__inner-container {
+        padding-bottom: 4rem;
+    }
+    .wp-block-cover__inner-container h1, .wp-block-cover__inner-container p{
+        text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+}
