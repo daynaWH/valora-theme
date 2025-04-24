@@ -20,6 +20,8 @@ html {
     --val-primary-color: #b88a72;
     --val-accent-color: #8c957e;
     --val-hover-color: #b2b6b3;
+
+    --val-gform-field-gap: 1.25rem;
 }
 
 
@@ -44,9 +46,30 @@ footer::before {
     filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.gform-theme--foundation .gform_fields {
+    row-gap: var(--val-gform-field-gap);
+}
+
+.gform_heading .gform_title {
+    margin-top: 0;
+}
+
 .gform_wrapper form .gfield_required {
     color: var(--val-hover-color);
 }
+
+#field_1_2 .ginput_container_email {
+    flex-direction: column;
+    align-items: normal;
+}
+
+.gform_wrapper form .gform_footer {
+    margin-top: var(--val-gform-field-gap);
+}
+
+/* .gform_validation_error {
+
+} */
 
 
 /* single room */
