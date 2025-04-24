@@ -13,8 +13,13 @@ import { __ } from '@wordpress/i18n';
  */
 import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-editor';
 
+/**
+* Enables interaction with WordPress entities (e.g., posts, users) using the core data store.
+* - useEntityProp: Allows easy access to WordPress custom fields.
+* 
+* @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-data/#useentityprop
+*/
 import { useEntityProp } from '@wordpress/core-data';
-import { useSelect } from '@wordpress/data';
 
 /**
 * Provides pre-built UI components for creating block settings in the editor.
@@ -35,19 +40,13 @@ import { PanelBody, PanelRow, ToggleControl } from '@wordpress/components';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit( {attributes, setAttributes} ) {
     
-    const postType = useSelect(
-        (select) => select('core/editor').getCurrentPostType(),
-        []
-    );
-    
-    const postId = useSelect(
-        (select) => select('core/editor').getCurrentPostId(),
-        []
-    );
-    
-    const [meta, setMeta] = useEntityProp('postType', postType, 'meta', postId);
+    // Set the post ID of your Page
+	const postID = 80;
+	
+	// Fetch meta data as an object and the setMeta function
+	const [meta, setMeta] = useEntityProp('postType', 'page', 'meta', postID);
  
 	// Destructure all our meta data for ease of use
 	const { company_address } = meta;

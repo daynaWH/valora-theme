@@ -104,7 +104,7 @@ function render_testimonial_slider( $attributes, $content ) {
 */
 function valora_register_custom_fields() {
 	register_post_meta(
-		'wp_template_part',
+		'page',
 		'company_email',
 		array(
 			'type'         => 'string',
@@ -114,7 +114,7 @@ function valora_register_custom_fields() {
 	);
 
     register_post_meta(
-		'wp_template_part',
+		'page',
 		'company_address',
 		array(
 			'type'         => 'string',
