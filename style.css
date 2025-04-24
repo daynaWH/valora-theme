@@ -71,6 +71,10 @@ footer::before {
 
 } */
 
+/* homepage */
+.home .wp-block-cover video {
+    z-index: -1;
+}
 
 /* single room */
 .single-product .wp-block-add-to-cart-form .cart .wc-bookings-booking-form-button {
