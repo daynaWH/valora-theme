@@ -22,12 +22,8 @@ return array(
 				'default' => false
 			)
 		),
-		'usesContext' => array(
-			'postId'
-		),
 		'textdomain' => 'valora-blocks',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
@@ -46,12 +42,16 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
+		'attributes' => array(
+			'svgIcon' => array(
+				'type' => 'boolean',
+				'default' => false
+			)
+		),
 		'textdomain' => 'valora-blocks',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'render' => 'file:./render.php',
-		'viewScript' => 'file:./view.js'
+		'render' => 'file:./render.php'
 	),
 	'testimonial-slider' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',

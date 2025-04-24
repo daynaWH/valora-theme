@@ -6,7 +6,18 @@
  */
 
 .wp-block-valora-blocks-company-email {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.wp-block-valora-blocks-company-email p {
+	margin: 0;
+	font-style: normal;
+}
+
+.wp-block-valora-blocks-company-email svg {
+	width: 2rem;
+	height: 2rem;
+    fill: #fff9ef;
 }
