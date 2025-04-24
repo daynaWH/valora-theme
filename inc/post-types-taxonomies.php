@@ -137,8 +137,6 @@ function valora_register_custom_post_types() {
         // 'menu_position'      => 5,
         'menu_icon'          => 'dashicons-editor-help',
         'supports'           => array( 'title', 'editor' ),
-        'template'           => array( array( 'core/paragraph' ) ),
-        'template_lock'      => 'all'
     );
     register_post_type( 'val-faq', $args );
 }

@@ -315,6 +315,11 @@
 						}
 					}
 				}
+			},
+			"core/pullquote": {
+				"typography": {
+					"fontSize": "1rem"
+				}
 			}
 		},
 		"color": {
