@@ -22,24 +22,23 @@ html {
     --val-hover-color: #b2b6b3;
 
     --val-gform-field-gap: 1.25rem;
+
+    scroll-behavior: smooth;
 }
-
-
 
 /* header */
 header {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
 /* footer */
 footer::before {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     aspect-ratio: 1920 / 175;
-    
-    background: url('assets/images/footer-bg.svg') no-repeat center;
+
+    background: url("assets/images/footer-bg.svg") no-repeat center;
     background-size: cover;
     z-index: 1;
     margin-bottom: 0;
@@ -77,7 +76,10 @@ footer::before {
 }
 
 /* single room */
-.single-product .wp-block-add-to-cart-form .cart .wc-bookings-booking-form-button {
+.single-product
+    .wp-block-add-to-cart-form
+    .cart
+    .wc-bookings-booking-form-button {
     color: var(--wp--preset--color--base);
     background-color: var(--wp--preset--color--primary);
     border: 1px solid var(--wp--preset--color--accent);
@@ -86,7 +88,7 @@ footer::before {
     padding: 1rem;
     border-radius: 10px;
     font-weight: 600;
-    grid-column: 2 / 3!important;
+    grid-column: 2 / 3 !important;
 }
 .single-product .cart .wc-bookings-booking-form-button:hover {
     color: var(--wp--preset--color--contrast);
@@ -103,11 +105,15 @@ footer::before {
     padding: 0;
 }
 
-.cart .ui-datepicker-title, .cart .ui-datepicker-inline .ui-datepicker-next, .cart .ui-datepicker-inline .ui-datepicker-prev, .cart .ui-datepicker-inline .ui-datepicker-header {
+.cart .ui-datepicker-title,
+.cart .ui-datepicker-inline .ui-datepicker-next,
+.cart .ui-datepicker-inline .ui-datepicker-prev,
+.cart .ui-datepicker-inline .ui-datepicker-header {
     background-color: var(--wp--preset--color--primary);
 }
 
-.cart .ui-datepicker-inline .ui-datepicker-next:hover, .cart .ui-datepicker-inline .ui-datepicker-prev:hover{
+.cart .ui-datepicker-inline .ui-datepicker-next:hover,
+.cart .ui-datepicker-inline .ui-datepicker-prev:hover {
     background-color: var(--wp--preset--color--hover);
 }
 .cart .wc-bookings-booking-cost {
@@ -122,14 +128,13 @@ footer::before {
 .cart #wc_bookings_field_duration {
     background-color: var(--wp--preset--color--primary);
     border: none;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 5px;
     color: var(--wp--preset--color--base);
 }
 
 .wc-tabs-wrapper .wc-tabs #tab-title-description {
     background-color: var(--wp--preset--color--base);
-
 }
 .wp-block-post-excerpt__more-text .wp-block-post-excerpt__more-link {
     background-color: var(--wp--preset--color--primary);
@@ -149,7 +154,7 @@ footer::before {
 .wc-bookings-booking-form input {
     background-color: var(--wp--preset--color--primary);
     border: none;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 5px;
     color: var(--wp--preset--color--base);
 }
@@ -168,26 +173,22 @@ footer::before {
     margin: 0;
     padding: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
 }
 
-.wp-block-cover__inner-container h1, .wp-block-cover__inner-container p{
+.wp-block-cover__inner-container h1,
+.wp-block-cover__inner-container p {
     text-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-    
 }
 
 .wp-block-cover__inner-container h1 {
     font-size: 7rem;
     font-weight: 700;
-    
 }
 
 .wp-block-cover .wp-block-cover__inner-container p {
     font-size: 2rem;
     font-weight: 400;
 }
-
-
 
 .wp-block-cover__inner-container {
     padding-bottom: 12rem;
@@ -213,8 +214,40 @@ footer::before {
     .wp-block-cover__inner-container {
         padding-bottom: 4rem;
     }
-    .wp-block-cover__inner-container h1, .wp-block-cover__inner-container p{
+    .wp-block-cover__inner-container h1,
+    .wp-block-cover__inner-container p {
         text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     }
-    
+}
+
+/* FAQ Navigation */
+
+.faq-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 5.5rem;
+    overflow-y: auto;
+}
+
+.faq-nav a {
+    text-decoration: none;
+    border-bottom: solid 1px;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 781px) {
+    .faq-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem 0;
+        margin: 0 auto;
+    }
+
+    .faq-nav a {
+        border-bottom: none;
+        border-right: solid 1px;
+        padding: 0 0.5rem;
+    }
 }
