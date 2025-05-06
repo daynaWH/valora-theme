@@ -75,6 +75,21 @@ footer::before {
     z-index: -1;
 }
 
+.home .wp-block-cover {
+    position: static;
+}
+
+.home header {
+    position: absolute;
+    width: 100%;
+    color: var(--val-base-color);
+    z-index: 100;
+}
+
+.home header a {
+    color: var(--val-base-color);
+}
+
 /* single room */
 .single-product
     .wp-block-add-to-cart-form
