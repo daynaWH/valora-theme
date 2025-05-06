@@ -75,3 +75,9 @@ function valora_faq_add_id( $block_content, $block ) {
     return $block_content;
 }
 add_filter( 'render_block', 'valora_faq_add_id', 10, 2 );
+
+// Lower Yoast SEO Metabox location
+function yoast_to_bottom(){
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoast_to_bottom' );
