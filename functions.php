@@ -155,3 +155,10 @@ function my_login_logo_url_title() {
     return 'Created for Valora Resort';
 }
 add_filter( 'login_headertext', 'my_login_logo_url_title' );
+
+// Remove unused admin menus
+function valora_remove_admin_links() {
+		remove_menu_page( 'edit.php' );           // Remove Posts link
+    	remove_menu_page( 'edit-comments.php' );  // Remove Comments link
+}
+add_action( 'admin_menu', 'valora_remove_admin_links' );
