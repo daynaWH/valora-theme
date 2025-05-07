@@ -75,3 +75,7 @@ function valora_faq_add_id( $block_content, $block ) {
     return $block_content;
 }
 add_filter( 'render_block', 'valora_faq_add_id', 10, 2 );
+
+
+//Removing deliverable date from gift card product page.
+remove_action( 'woocommerce_gc_form_fields_html', 'wc_gc_form_field_delivery_html', 40 );
