@@ -75,3 +75,30 @@ function valora_faq_add_id( $block_content, $block ) {
     return $block_content;
 }
 add_filter( 'render_block', 'valora_faq_add_id', 10, 2 );
+
+
+//Adding Google Maps API Key for ACF
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyAKoggjnQHim-FVn7KXjhc7tUu6m9xsAkA';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+
+// Shortcode for displaying ACF Google Map field in About page
+function acf_google_map_shortcode() {
+    $location = get_field('google_map'); // Replace with your actual field name if different
+    ob_start();
+    if ($location) {
+		?>
+        <div class="acf-map" style="height: 400px;">
+            <div class="marker" 
+				data-lat="<?php echo esc_attr($location['lat']); ?>" 
+				data-lng="<?php echo esc_attr($location['lng']); ?>">
+			</div>
+        </div>
+		<?php
+	}
+    return ob_get_clean();
+}
+add_shortcode('acf_google_map', 'acf_google_map_shortcode');
