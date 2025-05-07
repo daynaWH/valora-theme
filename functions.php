@@ -19,6 +19,18 @@ function valora_enqueues() {
 }
 add_action( 'wp_enqueue_scripts', 'valora_enqueues' );
 
+// Add favicon
+function add_favicon() {
+    echo '<link rel="icon" type="image/x-icon" href="'.get_stylesheet_directory_uri().'/favicon">';
+    echo '<link rel="icon" type="image/png" href="'.get_stylesheet_directory_uri().'/favicon/favicon-96x96.png" sizes="96x96" />';
+    echo '<link rel="icon" type="image/svg+xml" href="'.get_stylesheet_directory_uri().'/favicon/favicon.svg" />';
+    echo '<link rel="shortcut icon" href="'.get_stylesheet_directory_uri().'/favicon/favicon.ico" />';
+    echo '<link rel="apple-touch-icon" sizes="180x180" href="'.get_stylesheet_directory_uri().'/favicon/apple-touch-icon.png" />';
+    echo '<meta name="apple-mobile-web-app-title" content="Valora" />';
+    echo '<link rel="manifest" href="'.get_stylesheet_directory_uri().'/favicon/site.webmanifest" />';
+    }
+add_action('wp_head', 'add_favicon');
+
 // Load Custom Post Types & Custom Taxonomies
 require get_template_directory() . '/inc/post-types-taxonomies.php';
 
