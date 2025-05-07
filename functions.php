@@ -19,6 +19,18 @@ function valora_enqueues() {
 }
 add_action( 'wp_enqueue_scripts', 'valora_enqueues' );
 
+// Add favicon
+function add_favicon() {
+    echo '<link rel="icon" type="image/x-icon" href="'.get_stylesheet_directory_uri().'/favicon">';
+    echo '<link rel="icon" type="image/png" href="'.get_stylesheet_directory_uri().'/favicon/favicon-96x96.png" sizes="96x96" />';
+    echo '<link rel="icon" type="image/svg+xml" href="'.get_stylesheet_directory_uri().'/favicon/favicon.svg" />';
+    echo '<link rel="shortcut icon" href="'.get_stylesheet_directory_uri().'/favicon/favicon.ico" />';
+    echo '<link rel="apple-touch-icon" sizes="180x180" href="'.get_stylesheet_directory_uri().'/favicon/apple-touch-icon.png" />';
+    echo '<meta name="apple-mobile-web-app-title" content="Valora" />';
+    echo '<link rel="manifest" href="'.get_stylesheet_directory_uri().'/favicon/site.webmanifest" />';
+    }
+add_action('wp_head', 'add_favicon');
+
 // Load Custom Post Types & Custom Taxonomies
 require get_template_directory() . '/inc/post-types-taxonomies.php';
 
@@ -75,6 +87,42 @@ function valora_faq_add_id( $block_content, $block ) {
     return $block_content;
 }
 add_filter( 'render_block', 'valora_faq_add_id', 10, 2 );
+
+// Lower Yoast SEO Metabox location
+function yoast_to_bottom(){
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoast_to_bottom' );
+
+
+function valora_enqueue_aos() {
+    wp_enqueue_style(
+        'aos-css',
+        'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css',
+        [],
+        null
+    );
+
+    wp_enqueue_script(
+        'aos-js',
+        'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js',
+        [],
+        null,
+        true
+    );
+
+    wp_enqueue_script(
+        'aos-init',
+        get_template_directory_uri() . '/assets/js/aos-init.js',
+        ['aos-js'],
+        null,
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'valora_enqueue_aos');
+
+//Removing deliverable date from gift card product page.
+remove_action( 'woocommerce_gc_form_fields_html', 'wc_gc_form_field_delivery_html', 40 );
 
 
 //Adding Google Maps API Key for ACF

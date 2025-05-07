@@ -1,6 +1,30 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'animate-wrapper' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'valora-blocks/animate-wrapper',
+		'version' => '0.1.0',
+		'title' => 'Animate Wrapper',
+		'category' => 'design',
+		'icon' => 'editor-code',
+		'description' => 'Wraps content in AOS animation',
+		'attributes' => array(
+			'animationType' => array(
+				'type' => 'string',
+				'default' => 'fade-up'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => true
+		),
+		'textdomain' => 'valora-blocks',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'company-address' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -84,7 +108,7 @@ return array(
 				'default' => 'var(--wp--preset--color--primary)'
 			)
 		),
-		'textdomain' => 'testimonial-slider',
+		'textdomain' => 'valora-blocks',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
