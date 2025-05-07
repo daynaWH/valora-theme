@@ -120,3 +120,6 @@ function valora_enqueue_aos() {
     );
 }
 add_action('wp_enqueue_scripts', 'valora_enqueue_aos');
+
+//Removing deliverable date from gift card product page.
+remove_action( 'woocommerce_gc_form_fields_html', 'wc_gc_form_field_delivery_html', 40 );
