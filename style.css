@@ -235,8 +235,7 @@ footer::before {
     }
 }
 
-/* FAQ Navigation */
-
+/* FAQ navigation */
 .faq-nav {
     display: flex;
     flex-direction: column;

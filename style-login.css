@@ -1,0 +1,64 @@
+html {
+    --val-base-color: #fff9ef;
+    --val-contrast-color: #5c534f;
+    --val-primary-color: #b88a72;
+    --val-accent-color: #8c957e;
+    --val-hover-color: #b2b6b3;
+}
+
+body.login {
+    font-family: "Shippori Mincho", serif;
+}
+
+.login label,
+.login * {
+    font-size: 1rem;
+}
+
+.dashicons-visibility,
+.dashicons-hidden,
+a.privacy-policy-link {
+    color: var(--val-accent-color);
+}
+
+.dashicons-visibility:hover,
+.dashicons-visibility:active,
+a.privacy-policy-link:hover,
+a.privacy-policy-link:active,
+.login #nav a:hover,
+.login #nav a:focus,
+.login #backtoblog a:hover,
+.login #backtoblog a:focus,
+.login h1 a:hover,
+.login h1 a:focus {
+    color: var(--val-hover-color);
+}
+
+.login #nav a:active,
+.login #backtoblog a:active {
+    border: none;
+}
+
+.wp-core-ui .button-primary {
+    background-color: var(--val-contrast-color);
+    border: none;
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:active {
+    background-color: var(--val-base-color);
+    color: var(--val-contrast-color);
+    border: 1px solid var(--val-contrast-color);
+}
+
+input[type="checkbox"]:checked::before {
+    filter: invert(1);
+}
+
+input#rememberme:focus,
+.login #nav a:focus,
+.login #backtoblog a:focus,
+.login h1 a:focus {
+    border: var(--val-primary-color);
+    box-shadow: 0 0 0 2px var(--val-primary-color);
+}
