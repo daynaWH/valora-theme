@@ -135,7 +135,7 @@ add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 // Shortcode for displaying ACF Google Map field in About page
 function acf_google_map_shortcode() {
-    $location = get_field('google_map'); // Replace with your actual field name if different
+    $location = get_field('google_map');
     ob_start();
     if ($location) {
 		?>
@@ -150,3 +150,11 @@ function acf_google_map_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('acf_google_map', 'acf_google_map_shortcode');
+
+function enqueue_acf_map_scripts() { if ( is_page('about-us') ) 
+    { 
+        // load only on about page 
+        wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=YOUR_A…', array(), null, true ); 
+        wp_enqueue_script( 'acf-map', get_template_directory_uri() . '/js/acf-map.js', array('jquery'), null, true ); } 
+    } 
+    add_action( 'wp_enqueue_scripts', 'enqueue_acf_map_scripts' );
