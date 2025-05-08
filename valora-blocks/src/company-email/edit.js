@@ -4,7 +4,7 @@
 * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
 */
 import { __ } from '@wordpress/i18n';
- 
+
 /**
 * Provides utilities to interact with block props and render block content.
 * - useBlockProps: Handles block wrapper attributes like className and styles.
@@ -14,7 +14,7 @@ import { __ } from '@wordpress/i18n';
 * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/
 */
 import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-editor';
- 
+
 /**
 * Enables interaction with WordPress entities (e.g., posts, users) using the core data store.
 * - useEntityProp: Allows easy access to WordPress custom fields.
@@ -22,7 +22,7 @@ import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-edi
 * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-data/#useentityprop
 */
 import { useEntityProp } from '@wordpress/core-data';
- 
+
 /**
 * Provides pre-built UI components for creating block settings in the editor.
 * - PanelBody: Groups settings into collapsible panels.
@@ -33,7 +33,7 @@ import { useEntityProp } from '@wordpress/core-data';
 * @see https://developer.wordpress.org/block-editor/reference-guides/components/toggle-control/
 */
 import { PanelBody, PanelRow, ToggleControl } from '@wordpress/components';
- 
+
 /**
 * The edit function describes the structure of your block in the context of the
 * editor. This represents what the editor will render when the block is used.
@@ -43,23 +43,23 @@ import { PanelBody, PanelRow, ToggleControl } from '@wordpress/components';
 * @return {Element} Element to render.
 */
 export default function Edit( {attributes, setAttributes} ) {
- 
+
 	// Set the post ID of your Page
 	const postID = 80;
 	
 	// Fetch meta data as an object and the setMeta function
 	const [meta, setMeta] = useEntityProp('postType', 'page', 'meta', postID);
- 
+
 	// Destructure all our meta data for ease of use
 	const { company_email } = meta;
- 
+
 	// Flexible helper for setting a single meta value w/o mutating state
 	const updateMeta = ( key, value ) => {
 		setMeta( { ...meta, [key]: value } );
 	};
- 
+
 	const { svgIcon } = attributes;
- 
+
 	return (
 		<>
 			<email { ...useBlockProps() }>
