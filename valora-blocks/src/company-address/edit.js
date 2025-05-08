@@ -47,15 +47,15 @@ export default function Edit( {attributes, setAttributes} ) {
 	
 	// Fetch meta data as an object and the setMeta function
 	const [meta, setMeta] = useEntityProp('postType', 'page', 'meta', postID);
- 
+
 	// Destructure all our meta data for ease of use
 	const { company_address } = meta;
- 
+
 	// Flexible helper for setting a single meta value w/o mutating state
 	const updateMeta = ( key, value ) => {
 		setMeta( { ...meta, [key]: value } );
 	};
- 
+
 	const { svgIcon } = attributes;
 
 	return (
