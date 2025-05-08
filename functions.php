@@ -19,6 +19,15 @@ function valora_enqueues() {
 }
 add_action( 'wp_enqueue_scripts', 'valora_enqueues' );
 
+// Load stylesheet for login page
+function valora_login_stylesheet() {
+    wp_enqueue_style(
+        'custom-login',
+        get_stylesheet_directory_uri() . '/style-login.css'
+    );
+}
+add_action( 'login_enqueue_scripts', 'valora_login_stylesheet' );
+
 // Add favicon
 function add_favicon() {
     echo '<link rel="icon" type="image/x-icon" href="'.get_stylesheet_directory_uri().'/favicon">';
@@ -123,3 +132,33 @@ add_action('wp_enqueue_scripts', 'valora_enqueue_aos');
 
 //Removing deliverable date from gift card product page.
 remove_action( 'woocommerce_gc_form_fields_html', 'wc_gc_form_field_delivery_html', 40 );
+
+// Change Logo in the Login page
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/favicon/web-app-manifest-512x512.png);
+		background-repeat: no-repeat;
+        border-radius: 50%;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+// Link values attached to the logo in the Login page
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'Created for Valora Resort';
+}
+add_filter( 'login_headertext', 'my_login_logo_url_title' );
+
+// Remove unused admin menus
+function valora_remove_admin_links() {
+		remove_menu_page( 'edit.php' );           // Remove Posts link
+    	remove_menu_page( 'edit-comments.php' );  // Remove Comments link
+}
+add_action( 'admin_menu', 'valora_remove_admin_links' );

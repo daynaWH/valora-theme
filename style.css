@@ -28,6 +28,11 @@ html {
 
 /* header */
 header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--val-base-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -57,18 +62,29 @@ footer::before {
     color: var(--val-hover-color);
 }
 
-#field_1_2 .ginput_container_email {
-    flex-direction: column;
-    align-items: normal;
-}
-
 .gform_wrapper form .gform_footer {
     margin-top: var(--val-gform-field-gap);
 }
 
-/* .gform_validation_error {
+#gform_1_validation_container {
+    background-color: #ecbebecc;
+}
 
-} */
+#gform_1_validation_container h2,
+#gform_1_validation_container .gform-icon,
+#gform_1_validation_container .gform_validation_error_link,
+#gform_1_validation_container li::marker,
+.gfield_error .gfield_validation_message {
+    color: #c00000;
+}
+
+#gform_1_validation_container .gform-icon {
+    border-color: #c00000;
+}
+
+.gfield_error .gfield_validation_message {
+    color: #ffc3c3;
+}
 
 /* homepage */
 .home .wp-block-cover video {
@@ -77,17 +93,6 @@ footer::before {
 
 .home .wp-block-cover {
     position: static;
-}
-
-.home header {
-    position: absolute;
-    width: 100%;
-    color: var(--val-base-color);
-    z-index: 100;
-}
-
-.home header a {
-    color: var(--val-base-color);
 }
 
 /* single room */
