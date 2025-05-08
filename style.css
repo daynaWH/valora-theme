@@ -66,9 +66,25 @@ footer::before {
     margin-top: var(--val-gform-field-gap);
 }
 
-/* .gform_validation_error {
+#gform_1_validation_container {
+    background-color: #ecbebecc;
+}
 
-} */
+#gform_1_validation_container h2,
+#gform_1_validation_container .gform-icon,
+#gform_1_validation_container .gform_validation_error_link,
+#gform_1_validation_container li::marker,
+.gfield_error .gfield_validation_message {
+    color: #c00000;
+}
+
+#gform_1_validation_container .gform-icon {
+    border-color: #c00000;
+}
+
+.gfield_error .gfield_validation_message {
+    color: #ffc3c3;
+}
 
 /* homepage */
 .home .wp-block-cover video {
