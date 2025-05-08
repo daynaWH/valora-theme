@@ -22,8 +22,7 @@ return array(
 		),
 		'textdomain' => 'valora-blocks',
 		'editorScript' => 'file:./index.js',
-		'style' => 'file:./style-index.css',
-		'viewScript' => 'file:./view.js'
+		'style' => 'file:./style-index.css'
 	),
 	'company-address' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
