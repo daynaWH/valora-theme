@@ -28,6 +28,11 @@ html {
 
 /* header */
 header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--val-base-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -57,11 +62,6 @@ footer::before {
     color: var(--val-hover-color);
 }
 
-#field_1_2 .ginput_container_email {
-    flex-direction: column;
-    align-items: normal;
-}
-
 .gform_wrapper form .gform_footer {
     margin-top: var(--val-gform-field-gap);
 }
@@ -77,17 +77,6 @@ footer::before {
 
 .home .wp-block-cover {
     position: static;
-}
-
-.home header {
-    position: absolute;
-    width: 100%;
-    color: var(--val-base-color);
-    z-index: 100;
-}
-
-.home header a {
-    color: var(--val-base-color);
 }
 
 /* single room */
@@ -235,7 +224,8 @@ footer::before {
     }
 }
 
-/* FAQ navigation */
+/* FAQ Navigation */
+
 .faq-nav {
     display: flex;
     flex-direction: column;
