@@ -162,3 +162,41 @@ function valora_remove_admin_links() {
     	remove_menu_page( 'edit-comments.php' );  // Remove Comments link
 }
 add_action( 'admin_menu', 'valora_remove_admin_links' );
+
+// Add dashboard widgets - Welcome Message
+function wporg_add_dashboard_widgets() {
+    // Welcome Widget
+    wp_add_dashboard_widget(
+        'custom_welcome_widget',
+        'Welcome To Valora Resort Dashboard',
+        'wporg_custom_welcome_widget_display'
+    );
+
+    // Tutorial Widget
+    wp_add_dashboard_widget(
+        'custom_tutorial_widget',
+        'Managing WP Website - Tutorial',
+        'display_tutorial_widget_content'
+    );
+}
+add_action('wp_dashboard_setup', 'wporg_add_dashboard_widgets');
+
+// Welcome Widget
+function wporg_custom_welcome_widget_display() {
+    echo '<p>👋 Welcome to your WordPress dashboard!</p>';
+    echo '<p>Use the shortcuts below to quickly modify/view bookings:</p>';
+    echo '<ul>';
+    echo '<li><a href="' . admin_url('post-new.php?post_type=product') . '">Add New Products</a></li>';
+    echo '<li><a href="' . admin_url('edit.php?post_type=wc_booking') . '">View Bookings</a></li>';
+    echo '</ul>';
+}
+
+// Tutorial Widget
+function display_tutorial_widget_content() {
+    echo '<p>Need help updating content? View our step-by-step PDF tutorial below:</p>';
+    echo '<p>';
+    echo '<a href="' . esc_url( get_site_url() . '/wp-content/uploads/2025/05/client_tutorial.pdf' ) . '" target="_blank"   class="button button-primary">';
+    echo '📄 View Tutorial PDF';
+    echo '</a>';
+    echo '</p>';
+}
