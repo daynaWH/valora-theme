@@ -114,6 +114,14 @@ footer .wp-block-navigation__submenu-container {
     position: static;
 }
 
+@media (max-width: 480px) {
+    .wp-block-valora-blocks-animate-wrapper[data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
 /* single room */
 .single-product
     .wp-block-add-to-cart-form
@@ -279,6 +287,10 @@ footer .wp-block-navigation__submenu-container {
     scroll-margin-top: 5rem;
 }
 
+.val-faq {
+    line-height: 1.7;
+}
+
 @media (max-width: 781px) {
     .faq-nav {
         flex-direction: row;
@@ -295,12 +307,12 @@ footer .wp-block-navigation__submenu-container {
 }
 
 /* google map style */
-.map-container{
+.map-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.map-container iframe{
+.map-container iframe {
     width: 100%;
     height: 250px;
     margin: 1rem;
@@ -308,19 +320,19 @@ footer .wp-block-navigation__submenu-container {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 600px){
-    .map-container iframe{
+@media (min-width: 600px) {
+    .map-container iframe {
         width: 600px;
         height: 450px;
     }
 }
 
 /* media query style for gift cards */
-.wp-block-group.is-layout-flex.wp-container-core-group-is-layout-6c531013.wp-block-group-is-layout-flex{
+.wp-block-group.is-layout-flex.wp-container-core-group-is-layout-6c531013.wp-block-group-is-layout-flex {
     flex-direction: column;
 }
-@media (min-width: 760px){
-    .wp-block-group.is-layout-flex.wp-container-core-group-is-layout-6c531013.wp-block-group-is-layout-flex{
+@media (min-width: 760px) {
+    .wp-block-group.is-layout-flex.wp-container-core-group-is-layout-6c531013.wp-block-group-is-layout-flex {
         flex-direction: row;
     }
 }
