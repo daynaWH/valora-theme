@@ -86,14 +86,6 @@
 							"src": [
 								"file:./assets/fonts/shippori-mincho/shippori-mincho-700-normal.woff2"
 							]
-						},
-						{
-							"fontFamily": "\"Shippori Mincho\"",
-							"fontStyle": "normal",
-							"fontWeight": "800",
-							"src": [
-								"file:./assets/fonts/shippori-mincho/shippori-mincho-800-normal.woff2"
-							]
 						}
 					],
 					"fontFamily": "\"Shippori Mincho\", serif",
@@ -102,14 +94,6 @@
 				},
 				{
 					"fontFace": [
-						{
-							"fontFamily": "Nunito",
-							"fontStyle": "normal",
-							"fontWeight": "200",
-							"src": [
-								"file:./assets/fonts/nunito/nunito-200-normal.woff2"
-							]
-						},
 						{
 							"fontFamily": "Nunito",
 							"fontStyle": "normal",
@@ -156,14 +140,6 @@
 							"fontWeight": "800",
 							"src": [
 								"file:./assets/fonts/nunito/nunito-800-normal.woff2"
-							]
-						},
-						{
-							"fontFamily": "Nunito",
-							"fontStyle": "normal",
-							"fontWeight": "900",
-							"src": [
-								"file:./assets/fonts/nunito/nunito-900-normal.woff2"
 							]
 						}
 					],
