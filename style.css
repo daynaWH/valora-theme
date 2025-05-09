@@ -266,14 +266,17 @@ footer .wp-block-navigation__submenu-container {
     flex-direction: column;
     gap: 2rem;
     position: sticky;
-    top: 5.5rem;
-    overflow-y: auto;
+    top: 10rem;
 }
 
 .faq-nav a {
     text-decoration: none;
     border-bottom: solid 1px;
     padding-bottom: 1rem;
+}
+
+.faq-item {
+    scroll-margin-top: 5rem;
 }
 
 @media (max-width: 781px) {
