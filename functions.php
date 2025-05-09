@@ -95,21 +95,6 @@ function valora_faq_add_id( $block_content, $block ) {
 
     return $block_content;
 }
-
-// function valora_faq_add_id( $block_content, $block ) {
-//     if ( $block['blockName'] === 'core/post-template' && isset( $block['innerBlocks'] ) ) {
-//         return $block_content; // Don't wrap the post template itself
-//     }
-
-//     if ( isset( $block['blockName'] ) && $block['blockName'] === 'core/post-content' ) {
-//         $post = get_post();
-//         if ( $post ) {
-//             return '<article id="' . esc_attr( $post->ID ) . '" class="faq-item">' . $block_content . '</article>';
-//         }
-//     }
-
-//     return $block_content;
-// }
 add_filter( 'render_block', 'valora_faq_add_id', 10, 2 );
 
 // Lower Yoast SEO Metabox location
