@@ -26,6 +26,15 @@ html {
     scroll-behavior: smooth;
 }
 
+/* navigation */
+.wp-block-navigation__submenu-container {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.wp-block-navigation__submenu-container li:hover {
+    filter: brightness(0.9);
+}
+
 /* header */
 header {
     position: sticky;
@@ -34,6 +43,11 @@ header {
     z-index: 1000;
     background-color: var(--val-base-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header .wp-block-navigation__submenu-container {
+    background-color: var(--val-base-color) !important;
+    color: var(--val-contrast-color) !important;
 }
 
 /* footer */
@@ -48,6 +62,11 @@ footer::before {
     z-index: 1;
     margin-bottom: 0;
     filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.25));
+}
+
+footer .wp-block-navigation__submenu-container {
+    background-color: var(--val-contrast-color) !important;
+    color: var(--val-base-color) !important;
 }
 
 .gform-theme--foundation .gform_fields {
