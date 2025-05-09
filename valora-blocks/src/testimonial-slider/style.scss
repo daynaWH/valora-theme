@@ -2,7 +2,6 @@
 
 .wp-block-valora-blocks-testimonial-slider {
 	position: relative;
-	padding-bottom: 3rem;
 }
 
 .swiper:not(.swiper-navigation-disabled) {
@@ -26,6 +25,8 @@
 
 .swiper-slide .wp-block-pullquote {
 	padding-bottom: 1rem;
+    max-width: 62.5rem;
+    margin: 0 auto;
 }
 
 .swiper-slide blockquote {
@@ -34,7 +35,6 @@
 	gap: 1.5rem;
 
 	p {
-		max-width: 80%;
 		margin: 0 auto;
 	}
 
@@ -46,6 +46,7 @@
 	display: flex;
 	justify-content: center;
 	gap: 0.5rem;
+    padding-bottom: 3rem;
 
 	.star-filled {
 		height: 3rem;
