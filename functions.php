@@ -195,7 +195,7 @@ function wporg_custom_welcome_widget_display() {
 function display_tutorial_widget_content() {
     echo '<p>Need help updating content? View our step-by-step PDF tutorial below:</p>';
     echo '<p>';
-    echo '<a href="' . esc_url( get_site_url() . '/wp-content/uploads/2025/05/client_tutorial.pdf' ) . '" target="_blank"   class="button button-primary">';
+    echo '<a href="' . esc_url( get_site_url() . '/wp-content/uploads/2025/05/client_tutorial-1.pdf' ) . '" target="_blank"   class="button button-primary">';
     echo '📄 View Tutorial PDF';
     echo '</a>';
     echo '</p>';
