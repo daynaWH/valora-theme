@@ -1,5 +1,3 @@
-# valora-theme
-FWD40 – Team 4 – Capstone Project
 <h1>Overview</h1>
 <ul>
   <li>Capstone project completed as a team of 4 BCIT students</li>
